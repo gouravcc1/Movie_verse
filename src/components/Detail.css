@@ -1,4 +1,4 @@
-.Detail {
+/* .Detail {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -10,7 +10,7 @@
 }
 .Posterimg {
   border-radius: 5px;
-  width: 100%;
+  width: 80%;
   align-items: center;
 }
 .title {
@@ -33,7 +33,6 @@
   text-transform: none;
   font-style: normal;
   text-decoration: none;
-  /* line-height: 2.1em; */
   letter-spacing: 2.6px;
   text-shadow: 0px 0px 5px rgb(51, 42, 42);
 }
@@ -74,4 +73,103 @@
   .title {
     font-size: larger;
   }
+}
+///////////////////////////////////////////////////////////////////////////////////// */
+.DeailCard {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* padding: 20px; */
+  margin: 0px;
+  padding: 30px;
+  width: 800px;
+}
+
+.Detail {
+  display: flex;
+  justify-content: center;
+}
+.dataofmovie{
+  padding-left: 20px;
+
+}
+.Posterimg {
+
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 106px 20px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: 0px 0px 106px 20px rgba(0, 0, 0, 0.78);
+  box-shadow: 0px 0px 106px 20px rgba(0, 0, 0, 0.78);
+  width: 50%;
+}
+.Tagline{
+  font-style: italic;
+  /* padding: 20px 0px ; */
+  padding-bottom: 20px;
+
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.progressbar{
+  width: 20%;
+  height: 20%;
+  
+  /* padding-left: 0px;
+  margin: 0px; */
+
+}
+.vote{
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
+display: flex;
+padding: 20px 0px ;
+
+font-style: italic;
+
+}
+.votig{
+  padding-left: 20px;
+}
+.status{
+  display: flex;
+  padding: 20px 0px ;
+
+}
+.sts{
+  
+  border-radius: 8px;
+  color: rgb(0, 35, 177);
+  border-color:  rgb(0, 35, 177);
+}
+.gns{
+  padding: 15px 0px ;
+}
+.ss{
+  color: rgb(177, 24, 0);
+  border-color:  rgb(177, 177, 0);
+  margin-right: 10px ;
+}
+.lli{
+  margin: 15px 0px ;
+  padding: 5px;
+  color: rgb(6, 0, 0);
+  border-color:  rgb(255, 3, 3);
+  margin-right: 10px ;
+  color: aqua;
+  background-color: black;
+}
+.lli:hover{
+  cursor: pointer;
+}
+.over{
+  font-family: "Lucida Console", Monaco, monospace;
+font-size: 23px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: italic;
+font-variant: small-caps;
+text-transform: none;
+
 }

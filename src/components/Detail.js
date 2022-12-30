@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ReactImageAppear from "react-image-appear";
+
 import "./Detail.css";
 import "./load.css";
 
@@ -14,7 +16,9 @@ import AnimatedProgressProvider from "./AnimatedProgressProvider";
 import ChangingProgressProvider from "./ChangingProgressProvider";
 export default function Detail() {
   const { id } = useParams();
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState({
+    genres: [{ name: "hii" }],
+  });
   const [panding, setPanding] = useState(true);
   useEffect(() => {
     fetch(
@@ -26,13 +30,36 @@ export default function Detail() {
         setPanding(false);
       });
   }, [id]);
-  //   const tags=[];
-  //    if(movie.genres){  tags=movie.genres.map((old) => (
-  //       <h3 className="tagg">old.name</h3>
-  //     ))
-  //    }
   console.log(movie);
-  //   console.log(movie.genres);
+  const items = [
+    "fadeIn",
+    "fadeInUp",
+    "fadeInRight",
+    "fadeInDown",
+    "fadeInLeft",
+    "bounceIn",
+    "bounceInUp",
+    "bounceInRight",
+    "bounceInDown",
+    "bounceInLeft",
+    "flipInX",
+    "flipInY",
+    "zoomIn",
+    "blurIn",
+    "blurInUp",
+    "blurInRight",
+    "blurInDown",
+    "blurInLeft",
+    "fillIn",
+  ];
+  const gnr = movie.genres.map((old) => {
+    return (
+      <button key={old.id} className="sts ss">
+        {" "}
+        {old.name}
+      </button>
+    );
+  });
   return (
     <div className="Detail">
       {panding && (
@@ -40,40 +67,52 @@ export default function Detail() {
           <div className="spinner"></div>
         </div>
       )}
-      {
-        !panding && (
-          <div className="moviedetail">
-            <div>
-              <img
-                className="Posterimg"
-                src={"https://image.tmdb.org/t/p/w500/" + movie.backdrop_path}
-                alt="jjj"
-              />
-            </div>
+      {!panding && (
+        // <div className="moviedetail">
+        //   <div>
+        //     <ReactImageAppear
+        //       className="Posterimg"
+        //       src={"https://image.tmdb.org/t/p/w500/" + movie.backdrop_path}
+        //       animation={items[Math.floor(Math.random()*items.length)]}
+        //       animationDuration="1s"
+        //     />
+        //   </div>
+        //   <h1 className="title">{movie.title}</h1>
+        //   <div className="overview">
+        //     <h3>Overview</h3>
+        //     <h3 className="overviewd">{movie.overview}</h3>
+        //   </div>
+        //   <div className="lenth">
+        //     <h3>lenth</h3>
+        //     <h3 className="lenthd">
+        //       {Math.floor(movie.runtime / 60) +
+        //         "h:" +
+        //         (movie.runtime % 60) +
+        //         "m"}
+        //     </h3>
+        //   </div>
+
+        // </div>
+        <div className="DeailCard">
+          <img
+            className="Posterimg"
+            src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
+            // animation={items[Math.floor(Math.random() * items.length)]}
+            // animationDuration="1s"
+            // loaderClass="myloader"
+          />
+
+          <div className="dataofmovie">
             <h1 className="title">{movie.title}</h1>
-            {/* <h5 className="title">{movie.tagline}</h5> */}
-            <div className="overview">
-              <h3>Overview</h3>
-              <h3 className="overviewd">{movie.overview}</h3>
-            </div>
-            <div className="lenth">
-              <h3>lenth</h3>
-              <h3 className="lenthd">
-                {Math.floor(movie.runtime / 60) +
-                  "h:" +
-                  (movie.runtime % 60) +
-                  "m"}
-              </h3>
-            </div>
+            <p className="Tagline">{movie.tagline}</p>
+
             <div className="vote">
-              <h3>popularity</h3>
               <div className="progressbar">
                 <AnimatedProgressProvider
                   valueStart={0}
-                  valueEnd={66}
-                  duration={1.4}
+                  valueEnd={Math.floor(movie.vote_average * 10)}
+                  duration={6}
                   easingFunction={easeQuadInOut}
-                  //   repeat
                 >
                   {(value) => {
                     const roundedValue = Math.round(value);
@@ -81,29 +120,44 @@ export default function Detail() {
                       <CircularProgressbar
                         value={value}
                         text={`${roundedValue}%`}
-                        /* This is important to include, because if you're fully managing the
-        animation yourself, you'll want to disable the CSS animation. */
                         styles={buildStyles({ pathTransition: "none" })}
                       />
                     );
                   }}
                 </AnimatedProgressProvider>{" "}
               </div>
+              <div className="votig">
+                <h2>User Score</h2>
+                <h3>({movie.vote_count} Votes)</h3>
+              </div>
             </div>
-            {/* {movie.genres && <div>{tags}</div>} */}
+
+            <div className="status">
+              <button className="sts">{movie.status}</button>
+              <ul>
+                <li>
+                  {Math.floor(movie.runtime / 60) +
+                    "h " +
+                    (movie.runtime % 60) +
+                    "m"}
+                </li>
+              </ul>
+            </div>
+
+            <div className="gns">
+              {gnr}
+              {/* <button className="sts ss"> {movie.genres[0].name}</button>
+               <button className="sts ss"> {movie.genres[1].name}</button> */}
+              {/* <button className="sts ss"> {movie.genres[2].name}</button> */}
+            </div>
+            <div className="links">
+              <a href={movie.homepage}><button className="sts lli">WEBLINK</button></a>
+              <a href={"https://www.imdb.com/title/"+movie.imdb_id}><button className="sts lli">IMDB</button></a>
+            </div>
+            <div className="over">{movie.overview}</div>
           </div>
-        )
-        // <div className="moviedeatailcard">
-        //   <div className="imgdiv">
-        //
-        //   </div>
-        //   <h1>{movie.title}</h1>
-        //   <h3>{movie.status}</h3>
-        //   <h3>
-        //     {Math.floor(movie.runtime / 60) + "h:" + (movie.runtime % 60) + "m"}
-        //   </h3>
-        // </div>
-      }
+        </div>
+      )}
     </div>
   );
 }
