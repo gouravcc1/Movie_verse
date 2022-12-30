@@ -22,7 +22,7 @@ export default function Popular() {
     />
   ));
   return (
-    <div>
+    <div >
       {panding && (
         <div className = "loader-container">
           <div className="spinner"></div>

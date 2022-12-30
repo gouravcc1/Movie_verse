@@ -77,29 +77,11 @@ export default function Detail() {
         //       animationDuration="1s"
         //     />
         //   </div>
-        //   <h1 className="title">{movie.title}</h1>
-        //   <div className="overview">
-        //     <h3>Overview</h3>
-        //     <h3 className="overviewd">{movie.overview}</h3>
-        //   </div>
-        //   <div className="lenth">
-        //     <h3>lenth</h3>
-        //     <h3 className="lenthd">
-        //       {Math.floor(movie.runtime / 60) +
-        //         "h:" +
-        //         (movie.runtime % 60) +
-        //         "m"}
-        //     </h3>
-        //   </div>
 
-        // </div>
         <div className="DeailCard">
           <img
             className="Posterimg"
             src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
-            // animation={items[Math.floor(Math.random() * items.length)]}
-            // animationDuration="1s"
-            // loaderClass="myloader"
           />
 
           <div className="dataofmovie">
