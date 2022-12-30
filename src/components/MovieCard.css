@@ -1,0 +1,37 @@
+.IMG{
+    /* width: 200px; */
+    height: 250px;
+    border-radius: 40px;
+}
+.Title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color :aliceblue;
+    text-shadow: 3px 5px 2px #474747;
+}
+.Card{
+    text-align: center;
+
+    height: 250px;
+    /* width: 200px; */
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* -webkit-box-shadow: -10px 0px 75px 22px rgba(0,0,0,0.71);
+    -moz-box-shadow: -10px 0px 75px 22px rgba(0,0,0,0.71);
+     box-shadow: -10px 0px 75px 22px rgba(0,0,0,0.71); */
+     margin: 20px;
+}
+.IMG_BLUR{
+    filter: blur(1.5px);
+}
+.Increaceimgsize{
+    height: 260px;
+    /* width: 205px; */
+}
+.Card:hover{
+    cursor: pointer;
+}

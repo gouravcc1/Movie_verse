@@ -1,0 +1,40 @@
+.Header{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+    background-color: rgb(2, 68, 131);
+    /* width: 60%; */
+    border-radius: 100px;
+    padding: 20px;
+    margin: 10px;
+}
+.demoFont {
+    font-family: "Courier New", Courier, monospace;
+    /* font-size: 2px; */
+    letter-spacing: 0.2px;
+    word-spacing: 1.2px;
+    /* color: #000000; */
+    font-weight: 900;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 500px) {
+    .demoFont{
+        font-weight: 500px;
+        font-size: 24px;
+    }
+ }
+ @media screen and (max-width: 320px) {
+    .demoFont{
+        /* font-weight: 500px; */
+        font-size: 16px;
+    }
+ }
+ @media screen and (max-width: 230px) {
+    .demoFont{
+        /* font-weight: 500px; */
+        font-size: 10px;
+    }
+ }

@@ -1,0 +1,77 @@
+.Detail {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.moviedetail {
+  width: 50%;
+  background-color: aqua;
+  border-radius: 5px;
+}
+.Posterimg {
+  border-radius: 5px;
+  width: 100%;
+  align-items: center;
+}
+.title {
+  text-align: center;
+}
+.overview {
+  text-align: justify;
+  align-items: center;
+
+  text-justify: inter-word;
+  display: flex;
+  padding: 10px;
+}
+.overviewd {
+  padding: 0px 20px;
+  font-family: Sedgwick Ave, handwriting;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  /* line-height: 2.1em; */
+  letter-spacing: 2.6px;
+  text-shadow: 0px 0px 5px rgb(51, 42, 42);
+}
+.lenth {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+}
+.lenthd {
+  padding: 0px 58px;
+  font-family: Sedgwick Ave, handwriting;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 2.6px;
+  text-shadow: 0px 0px 5px rgb(51, 42, 42);
+}
+.progressbar{
+    width: 10%;
+    height: 10%;
+    padding-left: 30px;
+
+}
+.vote{
+    align-items: center;
+  display: flex;
+  padding: 10px;
+}
+@media screen and (max-width: 700px) {
+  .moviedetail {
+    margin: 0px;
+    width: 100%;
+  }
+  .title {
+    font-size: larger;
+  }
+}
