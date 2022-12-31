@@ -9,11 +9,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color :aliceblue;
+    
     text-shadow: 3px 5px 2px #474747;
 }
 .Card{
     text-align: center;
-
+    width: fit-content;
     height: 250px;
     /* width: 200px; */
     border-radius: 50px;

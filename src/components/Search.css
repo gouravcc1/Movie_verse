@@ -1,0 +1,5 @@
+.SSearch{
+    display: grid;
+    padding: 40px;
+    grid-template-columns: repeat(6,auto);
+}

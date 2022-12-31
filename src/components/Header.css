@@ -1,6 +1,6 @@
 .Header{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     color: aqua;
     background-color: rgb(2, 68, 131);
     /* width: 60%; */
@@ -19,6 +19,23 @@
     font-style: italic;
     font-variant: small-caps;
     text-transform: capitalize;
+}
+.search{
+    border:none;
+    border-radius: 28px;
+    text-align: center;
+    background-color: rgb(0, 1, 2);
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 25px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #F3FFF7;
+font-style: italic;
+}
+.link{
+    text-decoration: none;
+    
 }
 @media screen and (max-width: 500px) {
     .demoFont{

@@ -1,177 +1,101 @@
-/* .Detail {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.moviedetail {
-  width: 50%;
-  background-color: aqua;
-  border-radius: 5px;
-}
-.Posterimg {
-  border-radius: 5px;
-  width: 80%;
-  align-items: center;
-}
-.title {
-  text-align: center;
-}
-.overview {
-  text-align: justify;
-  align-items: center;
-
-  text-justify: inter-word;
-  display: flex;
-  padding: 10px;
-}
-.overviewd {
-  padding: 0px 20px;
-  font-family: Sedgwick Ave, handwriting;
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 1);
-  text-transform: none;
-  font-style: normal;
-  text-decoration: none;
-  letter-spacing: 2.6px;
-  text-shadow: 0px 0px 5px rgb(51, 42, 42);
-}
-.lenth {
-  display: flex;
-  align-items: center;
-
-  padding: 10px;
-}
-.lenthd {
-  padding: 0px 58px;
-  font-family: Sedgwick Ave, handwriting;
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 1);
-  text-transform: none;
-  font-style: normal;
-  text-decoration: none;
-  letter-spacing: 2.6px;
-  text-shadow: 0px 0px 5px rgb(51, 42, 42);
-}
-.progressbar{
-    width: 10%;
-    height: 10%;
-    padding-left: 30px;
-
-}
-.vote{
-    align-items: center;
-  display: flex;
-  padding: 10px;
-}
-@media screen and (max-width: 700px) {
-  .moviedetail {
-    margin: 0px;
-    width: 100%;
-  }
-  .title {
-    font-size: larger;
-  }
-}
-///////////////////////////////////////////////////////////////////////////////////// */
 .DeailCard {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   /* padding: 20px; */
-  margin: 0px;
-  padding: 30px;
-  width: 800px;
+ height: fit-content;
+  /* padding: 20px; */
+  width: 70%;
+  /* height: 60%; */
 }
-
 .Detail {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
 }
-.dataofmovie{
-  padding-left: 20px;
-
+.dataofmovie {
+  padding-left: 40px;
 }
 .Posterimg {
-
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 106px 20px rgba(0, 0, 0, 0.78);
   -moz-box-shadow: 0px 0px 106px 20px rgba(0, 0, 0, 0.78);
   box-shadow: 0px 0px 106px 20px rgba(0, 0, 0, 0.78);
-  width: 50%;
-  /* height: 100%; */
-  
+  width: 35%;
+  /* height: 50%; */
 }
-.Tagline{
+.Tagline {
   font-style: italic;
   /* padding: 20px 0px ; */
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-.progressbar{
-  width: 20%;
-  height: 20%;
-  
+.progressbar {
+  width: 10%;
+  height: 10%;
+
   /* padding-left: 0px;
   margin: 0px; */
-
 }
-.vote{
+.vote {
   font-family: "Courier New", Courier, monospace;
   align-items: center;
-display: flex;
-padding: 20px 0px ;
-
-font-style: italic;
-
-}
-.votig{
-  padding-left: 20px;
-}
-.status{
   display: flex;
-  padding: 20px 0px ;
+  padding: 15px 0px;
 
+  font-style: italic;
 }
-.sts{
-  
+.votig {
+  padding-left: 15px;
+}
+.status {
+  display: flex;
+  padding: 15px 0px;
+}
+.sts {
   border-radius: 8px;
   color: rgb(0, 35, 177);
-  border-color:  rgb(0, 35, 177);
+  border-color: rgb(0, 35, 177);
 }
-.gns{
-  padding: 15px 0px ;
+.gns {
+  padding: 15px 0px;
 }
-.ss{
+.ss {
   color: rgb(177, 24, 0);
-  border-color:  rgb(177, 177, 0);
-  margin-right: 10px ;
+  border-color: rgb(177, 177, 0);
+  margin-right: 10px;
 }
-.lli{
-  margin: 15px 0px ;
+.lli {
+  margin: 15px 0px;
   padding: 5px;
   color: rgb(6, 0, 0);
-  border-color:  rgb(255, 3, 3);
-  margin-right: 10px ;
+  border-color: rgb(255, 3, 3);
+  margin-right: 10px;
   color: aqua;
   background-color: black;
 }
-.lli:hover{
+.lli:hover {
   cursor: pointer;
 }
-.over{
+.over {
   font-family: "Lucida Console", Monaco, monospace;
-font-size: 23px;
-letter-spacing: 2px;
-word-spacing: 2px;
-color: #000000;
-font-weight: normal;
-text-decoration: none;
-font-style: italic;
-font-variant: small-caps;
-text-transform: none;
-
+  font-size: 23px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: none;
+}
+@media screen and (max-width: 700px) {
+  .DeailCard {
+    /* width: 100%; */
+    flex-direction: column;
+  }
 }

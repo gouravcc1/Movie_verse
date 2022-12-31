@@ -93,7 +93,7 @@ export default function Detail() {
                 <AnimatedProgressProvider
                   valueStart={0}
                   valueEnd={Math.floor(movie.vote_average * 10)}
-                  duration={6}
+                  duration={3}
                   easingFunction={easeQuadInOut}
                 >
                   {(value) => {

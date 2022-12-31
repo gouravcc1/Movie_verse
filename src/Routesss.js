@@ -7,8 +7,7 @@ function Routesss() {
     return (
       
       <div className="App">
-        <Header />
-        <Popular/>
+        <Popular  />
         <Upcoming />
         <TopRated />
       </div>
