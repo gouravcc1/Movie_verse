@@ -83,8 +83,7 @@ export default function Detail() {
             className="Posterimg"
             src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
           />
-
-          <div className="dataofmovie">
+          <div  className="dataofmovie">
             <h1 className="title">{movie.title}</h1>
             <p className="Tagline">{movie.tagline}</p>
 
