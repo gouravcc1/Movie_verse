@@ -7,18 +7,29 @@ export default function Header() {
   const [name, setName] = useState("");
   const navigate = useNavigate()
 
-
   function handleChange(events) {
+    // navigate("/Search/" + name);
     setName(events.target.value);
+
   }
-  useEffect(() => {
+  // // useEffect(() => {
+  //     if (name !== "") {
+        // setName("");
+  //     }
+  // }, [name, navigate]);
+  function handleKeyPress(event) {
+
+    if (event.key === "Enter") {
+      // Perform the search operation when "Enter" key is pressed
       if (name !== "") {
         navigate("/Search/" + name);
       }else{
         navigate("/");
 
+      }
+
     }
-  }, [name, navigate]);
+  }
   console.log(name);
   return (
     <div className="Header">
@@ -35,12 +46,10 @@ export default function Header() {
           name="name"
           value={name}
           onChange={handleChange}
+          onKeyDown={handleKeyPress}
           type="text"
           placeholder="Search"
         />
-        {/* <Link to={"/Search/" + name} className="link">
-        </Link> */}
-        {/* <BsSearch className="icon" /> */}
       </div>
     </div>
   );

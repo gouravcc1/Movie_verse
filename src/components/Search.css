@@ -22,3 +22,21 @@
     75%  {background-color:green; left:1300px; top:0px;} */
     100% {background-color:red; left:0%;}
   }
+
+  @media screen and (max-width: 1300px) {
+    .SSearch {
+      /* width: 100%; */
+      /* flex-direction: column; */
+    grid-template-columns: repeat(5,auto);
+
+    }
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .SSearch {
+      /* width: 100%; */
+      /* flex-direction: column; */
+    grid-template-columns: repeat(4,auto);
+
+    }
+  }

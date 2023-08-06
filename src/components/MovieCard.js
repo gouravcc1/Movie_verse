@@ -19,8 +19,8 @@ export default function MovieCard(props){
             console.log("hii");
         }}
         >
-        {!hovering &&<img alt="movie "  className="IMG"   src={props.Src} />}
-        {hovering  && <img  alt="movie " className="IMG IMG_BLUR Increaceimgsize"   src={props.Src} />}
+       <img alt="movie "  className="IMG"   src={props.Src} />
+        {/* {hovering  && <img  alt="movie " className="IMG IMG_BLUR Increaceimgsize"   src={props.Src} />} */}
         {hovering  && <h2   className="Title">{props.title}</h2>}
         </div>
         </Link>
